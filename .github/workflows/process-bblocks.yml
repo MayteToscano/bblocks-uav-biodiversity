@@ -3,16 +3,19 @@ name: Process building blocks
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
     uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@master
     with:
-      base-url: https://maytetoscano.github.io/bblocks-uav-biodiversity
       items-dir: _sources
+      register-file: build/register.json
       generated-docs-path: build/generateddocs
       annotated-path: build/annotated
       test-outputs-path: build/tests
-      register-file: build/register.json
       clean: true
       deploy-viewer: true
+      viewer-path: .
+      base-url: https://maytetoscano.github.io/bblocks-uav-biodiversity
+      github-base-url: https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/
