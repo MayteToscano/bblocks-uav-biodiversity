@@ -1,18 +1,17 @@
-name: Process Building Blocks
+name: Validate and process Building Blocks
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  build:
-    uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@master
-    with:
-      identifier-prefix: "ogc.ubcp."
-      items-dir: "_sources"
-      base-url: "https://maytetoscano.github.io/bblocks-uav-biodiversity/"
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
+  validate-and-process:
+    uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master

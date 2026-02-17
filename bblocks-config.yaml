@@ -1,20 +1,4 @@
-# A short, descriptive name of this building block collection
-name: UBCP - UAV Biodiversity Capture Profile
-
-abstract: |
-  UBCP (UAV Biodiversity Capture Profile) is a modular set of OGC Building Blocks to model
-  UAV biodiversity data capture requirements in an interoperable, machine-readable way.
-  It defines a mandatory Core module and optional extensions (Thermal, Multispectral, LiDAR, RTK),
-  plus an overall Profile building block that aggregates them.
-
-description: |
-  This repository is structured following the OGC Building Blocks incubator pattern.
-  Building blocks are under _sources/<block-name>/.
-  The postprocess pipeline generates the register and documentation under build/.
-
-# Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.ubcp.
-
-# List of imports ("default" is an alias for the main OGC Building Blocks Register)
+name: bblocks-uav-biodiversity
+base-url: "https://maytetoscano.github.io/bblocks-uav-biodiversity/"
 imports:
-  - default
+  - "https://opengeospatial.github.io/bblocks/register.json"
