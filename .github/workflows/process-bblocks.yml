@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@main
+    uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@master
     with:
       identifier-prefix: "ogc.ubcp."
       items-dir: "_sources"
