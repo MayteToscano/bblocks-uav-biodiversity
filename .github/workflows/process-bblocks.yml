@@ -1,21 +1,16 @@
-name: Process building blocks
-
+name: Validate and process Building Blocks
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  build:
-    uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@main
-    with:
-      items-dir: _sources
-      register-file: build/register.json
-      generated-docs-path: build/generateddocs
-      annotated-path: build/annotated
-      test-outputs-path: build/tests
-      clean: true
-      deploy-viewer: true
-      viewer-path: .
-      base-url: https://maytetoscano.github.io/bblocks-uav-biodiversity
-      github-base-url: https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/
+  validate-and-process:
+    uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
