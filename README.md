@@ -11,7 +11,7 @@ This repository follows the same structure as other OGC Building Blocks incubato
 - `extension.rtk` — RTK/GNSS precision extension
 - `profile` — Aggregating profile (depends on core + extensions)
 
-All sources live under `_sources/<block>/`.
+All sources live under `_sources/<block>/`
 
 ## Build (local)
 
