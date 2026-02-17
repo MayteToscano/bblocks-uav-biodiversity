@@ -1,0 +1,5 @@
+{
+  "emissivity": 0.98,
+  "thermal_calibration": "factory-cal-2025-07",
+  "radiometric_temperature_model": "vendor-model-v1"
+}

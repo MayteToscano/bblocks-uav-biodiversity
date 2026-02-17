@@ -1,0 +1,53 @@
+
+
+{
+  "itemIdentifier": "ogc.profile",
+  "$schema": "metaschema.yaml",
+  "name": "profile",
+  "abstract": "UAV biodiversity building block",
+  "status": "under-development",
+  "dateTimeAddition": "2026-02-17T08:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-02-17",
+  "tags": [
+    "uav",
+    "biodiversity"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.extension.multispectral",
+    "ogc.extension.rtk",
+    "ogc.extension.thermal",
+    "ogc.core",
+    "ogc.extension.lidar"
+  ],
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/profile/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/profile/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/profile/schema.yaml",
+  "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/profile/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/profile/",
+  "description": "## Purpose\n\nDefines the **UBCP Profile** as an aggregation of:\n\n- `ogc.ubcp.core` (mandatory)\n- `ogc.ubcp.extension.*` (optional, as applicable)\n\nThis is a convenient entry point for validation and packaging.\n",
+  "examples": [
+    {
+      "title": "Example for UBCP Profile (Core + Extensions)",
+      "base-uri": "http://example.com/ubcp/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/example.json",
+          "code": "{\n  \"core\": {\n    \"temporal_reference\": \"2026-02-17T08:00:00Z\",\n    \"spatial_reference\": {\n      \"latitude_deg\": 44.74835,\n      \"longitude_deg\": 22.43592,\n      \"altitude_m\": 416.7\n    },\n    \"platform_orientation\": {\n      \"yaw_deg\": 71.1,\n      \"pitch_deg\": 3.8,\n      \"roll_deg\": 3.7\n    },\n    \"sensor_identification\": {\n      \"platform_model\": \"Matrice 350 RTK\",\n      \"sensor_model\": \"H20T\",\n      \"firmware_version\": \"07.00.01.05\"\n    },\n    \"optical_configuration\": {\n      \"focal_length_mm\": 13.5,\n      \"exposure_time_s\": 0.002,\n      \"iso\": 100,\n      \"f_number\": 1.0\n    },\n    \"crs_declaration\": {\n      \"horizontal_crs\": \"http://www.opengis.net/def/crs/EPSG/0/4326\",\n      \"vertical_reference\": \"AboveSeaLevel\"\n    },\n    \"processing_lineage\": {\n      \"activity_id\": \"capture-272d5ad8b6eb11ef\",\n      \"preprocessing_applied\": false,\n      \"lineage_statement\": \"Raw capture metadata recorded by platform.\"\n    }\n  },\n  \"rtk\": {\n    \"positioning_mode\": \"RTK\",\n    \"rtk_std_lat_m\": 0.0145,\n    \"rtk_std_lon_m\": 0.0118,\n    \"rtk_std_hgt_m\": 0.0272,\n    \"rtk_diff_age_s\": 0.4\n  }\n}\n",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/profile/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: UBCP Profile\ndescription: An aggregate object that contains Core plus optional extensions.\ntype: object\nadditionalProperties: false\nproperties:\n  core:\n    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.yaml\n  thermal:\n    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.yaml\n  multispectral:\n    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.yaml\n  lidar:\n    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.yaml\n  rtk:\n    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.yaml\nrequired:\n- core\n",
+  "gitRepository": "https://github.com/MayteToscano/bblocks-uav-biodiversity",
+  "gitPath": "_sources/profile"
+}

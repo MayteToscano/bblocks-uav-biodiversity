@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.extension.thermal",
+  "$schema": "metaschema.yaml",
+  "name": "extension.thermal",
+  "abstract": "UAV biodiversity building block",
+  "status": "under-development",
+  "dateTimeAddition": "2026-02-17T08:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-02-17",
+  "tags": [
+    "uav",
+    "biodiversity"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.thermal/schema.yaml",
+  "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.thermal/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/extension/thermal/",
+  "description": "## Purpose\n\nAdds **thermal-specific** capture requirements needed to interpret radiometric thermal imagery in biodiversity monitoring.\n\n## Typical sources\n\nVendor EXIF/MakerNotes plus calibration artefacts stored alongside the dataset.\n",
+  "examples": [
+    {
+      "title": "Example for UBCP Thermal Extension",
+      "base-uri": "http://example.com/ubcp/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/example.json",
+          "code": "{\n  \"emissivity\": 0.98,\n  \"thermal_calibration\": \"factory-cal-2025-07\",\n  \"radiometric_temperature_model\": \"vendor-model-v1\"\n}\n",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/extension/thermal/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: UBCP Thermal Extension\ntype: object\nadditionalProperties: false\nproperties:\n  emissivity:\n    type: number\n    minimum: 0\n    maximum: 1\n  thermal_calibration:\n    type: string\n    description: Identifier or description of thermal calibration coefficients/procedure.\n  radiometric_temperature_model:\n    type: string\n    description: Reference to the model used to convert raw counts to temperature.\nrequired:\n- emissivity\n",
+  "gitRepository": "https://github.com/MayteToscano/bblocks-uav-biodiversity",
+  "gitPath": "_sources/extension.thermal"
+}

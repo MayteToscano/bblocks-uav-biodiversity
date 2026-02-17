@@ -1,0 +1,255 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bblocks://ogc.profile> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "profile" ;
+    dct:abstract "UAV biodiversity building block"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-02-17T08:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.profile> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/profile/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/profile/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-02-17"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    skos:prefLabel "profile" ;
+    skos:topConceptOf <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    dcat:keyword "biodiversity",
+        "uav" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/profile/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/profile/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.core>,
+        <bblocks://ogc.extension.lidar>,
+        <bblocks://ogc.extension.multispectral>,
+        <bblocks://ogc.extension.rtk>,
+        <bblocks://ogc.extension.thermal> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://maytetoscano.github.io/bblocks-uav-biodiversity/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N7447017787e14e13a5525cfb48fd8808 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-02-17T13:49:01.083834"^^xsd:dateTime ;
+            prov:startedAtTime "2026-02-17T13:49:00.829008"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:3db10ee4d791430576c015ab3d738931f41faeaf" ;
+                    rdfs:seeAlso <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/register.json> ] ;
+            prov:wasAssociatedWith _:N7447017787e14e13a5525cfb48fd8808 ] .
+
+<bblocks://ogc.core> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "core" ;
+    dct:abstract "UAV biodiversity building block"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-02-17T08:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/core/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/core/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.core> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-02-17"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    skos:prefLabel "core" ;
+    skos:topConceptOf <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    dcat:keyword "biodiversity",
+        "uav" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.extension.lidar> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "extension.lidar" ;
+    dct:abstract "UAV biodiversity building block"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-02-17T08:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/lidar/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.lidar> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/lidar/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-02-17"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    skos:prefLabel "extension.lidar" ;
+    skos:topConceptOf <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    dcat:keyword "biodiversity",
+        "uav" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.extension.multispectral> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "extension.multispectral" ;
+    dct:abstract "UAV biodiversity building block"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-02-17T08:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/multispectral/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.multispectral> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/multispectral/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-02-17"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    skos:prefLabel "extension.multispectral" ;
+    skos:topConceptOf <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    dcat:keyword "biodiversity",
+        "uav" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.extension.rtk> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "extension.rtk" ;
+    dct:abstract "UAV biodiversity building block"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-02-17T08:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/rtk/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/rtk/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.rtk> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-02-17"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    skos:prefLabel "extension.rtk" ;
+    skos:topConceptOf <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    dcat:keyword "biodiversity",
+        "uav" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.extension.thermal> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "extension.thermal" ;
+    dct:abstract "UAV biodiversity building block"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-02-17T08:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/thermal/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.thermal> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/thermal/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-02-17"^^xsd:date ;
+    skos:inScheme <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    skos:prefLabel "extension.thermal" ;
+    skos:topConceptOf <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    dcat:keyword "biodiversity",
+        "uav" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://maytetoscano.github.io/bblocks-uav-biodiversity/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
+    rdfs:label "Building Blocks - bblocks-uav-biodiversity" ;
+    dct:modified "2026-02-17T13:49:00.341601"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.core>,
+        <bblocks://ogc.extension.lidar>,
+        <bblocks://ogc.extension.multispectral>,
+        <bblocks://ogc.extension.rtk>,
+        <bblocks://ogc.extension.thermal>,
+        <bblocks://ogc.profile> ;
+    skos:prefLabel "Building Blocks - bblocks-uav-biodiversity" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/bblocks.jsonld> ] ;
+    foaf:homepage <https://maytetoscano.github.io/bblocks-uav-biodiversity/> ;
+    bblocks:hasValidationReport <https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/report.html> .
+
+_:N7447017787e14e13a5525cfb48fd8808 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.17" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+

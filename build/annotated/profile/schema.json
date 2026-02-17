@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UBCP Profile",
+  "description": "An aggregate object that contains Core plus optional extensions.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "core": {
+      "$ref": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.json"
+    },
+    "thermal": {
+      "$ref": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.json"
+    },
+    "multispectral": {
+      "$ref": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.json"
+    },
+    "lidar": {
+      "$ref": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.json"
+    },
+    "rtk": {
+      "$ref": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.json"
+    }
+  },
+  "required": [
+    "core"
+  ]
+}

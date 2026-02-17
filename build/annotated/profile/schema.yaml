@@ -1,0 +1,18 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: UBCP Profile
+description: An aggregate object that contains Core plus optional extensions.
+type: object
+additionalProperties: false
+properties:
+  core:
+    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.yaml
+  thermal:
+    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.yaml
+  multispectral:
+    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.yaml
+  lidar:
+    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.yaml
+  rtk:
+    $ref: https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.yaml
+required:
+- core

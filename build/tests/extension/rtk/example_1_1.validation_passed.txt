@@ -1,0 +1,10 @@
+Validation report for ogc.extension.rtk - extension.rtk
+Generated 2026-02-17T13:49:00.795191+00:00
+=== Files ===
+Using examples/example.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

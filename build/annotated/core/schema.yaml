@@ -1,0 +1,106 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: UBCP Core UAV Capture Module (Mandatory Base)
+type: object
+additionalProperties: false
+properties:
+  temporal_reference:
+    description: Capture timestamp in ISO 8601.
+    type: string
+    format: date-time
+  spatial_reference:
+    description: Spatial position of the capture (WGS84 lat/lon) and altitude.
+    type: object
+    additionalProperties: false
+    properties:
+      latitude_deg:
+        type: number
+        minimum: -90
+        maximum: 90
+      longitude_deg:
+        type: number
+        minimum: -180
+        maximum: 180
+      altitude_m:
+        type: number
+    required:
+    - latitude_deg
+    - longitude_deg
+  platform_orientation:
+    description: UAV orientation at exposure (degrees).
+    type: object
+    additionalProperties: false
+    properties:
+      yaw_deg:
+        type: number
+      pitch_deg:
+        type: number
+      roll_deg:
+        type: number
+    required:
+    - yaw_deg
+    - pitch_deg
+    - roll_deg
+  sensor_identification:
+    description: Identifiers for the sensor and platform.
+    type: object
+    additionalProperties: false
+    properties:
+      platform_model:
+        type: string
+      platform_serial:
+        type: string
+      sensor_model:
+        type: string
+      sensor_serial:
+        type: string
+      firmware_version:
+        type: string
+    required:
+    - platform_model
+    - sensor_model
+  optical_configuration:
+    description: Basic optical configuration of the sensor.
+    type: object
+    additionalProperties: false
+    properties:
+      focal_length_mm:
+        type: number
+      f_number:
+        type: number
+      exposure_time_s:
+        type: number
+      iso:
+        type: integer
+        minimum: 0
+    required:
+    - focal_length_mm
+    - exposure_time_s
+  crs_declaration:
+    description: CRS identifiers used for horizontal and vertical referencing.
+    type: object
+    additionalProperties: false
+    properties:
+      horizontal_crs:
+        type: string
+      vertical_reference:
+        type: string
+    required:
+    - horizontal_crs
+  processing_lineage:
+    description: High-level lineage description of capture/processing.
+    type: object
+    additionalProperties: false
+    properties:
+      activity_id:
+        type: string
+      preprocessing_applied:
+        type: boolean
+      lineage_statement:
+        type: string
+required:
+- temporal_reference
+- spatial_reference
+- platform_orientation
+- sensor_identification
+- optical_configuration
+- crs_declaration

@@ -1,0 +1,290 @@
+{
+  "name": "bblocks-uav-biodiversity",
+  "modified": "2026-02-17T13:49:00.341601",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"2387fb012a9744d98c528651f0f987e912758a50",
+      "shortCommitId": "\"2387fb",
+      "date": "2026-02-16T13:20:50+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/MayteToscano/bblocks-uav-biodiversity",
+  "gitHubRepository": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/",
+  "baseURL": "https://maytetoscano.github.io/bblocks-uav-biodiversity/",
+  "viewerURL": "https://maytetoscano.github.io/bblocks-uav-biodiversity/",
+  "validationReport": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/report.html",
+  "validationReportJson": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.core",
+      "$schema": "metaschema.yaml",
+      "name": "core",
+      "abstract": "UAV biodiversity building block",
+      "status": "under-development",
+      "dateTimeAddition": "2026-02-17T08:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1.0",
+      "dateOfLastChange": "2026-02-17",
+      "tags": [
+        "uav",
+        "biodiversity"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.yaml",
+        "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.json"
+      },
+      "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/core/schema.yaml",
+      "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/core/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/core/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/core/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/core/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.core"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.extension.lidar",
+      "$schema": "metaschema.yaml",
+      "name": "extension.lidar",
+      "abstract": "UAV biodiversity building block",
+      "status": "under-development",
+      "dateTimeAddition": "2026-02-17T08:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1.0",
+      "dateOfLastChange": "2026-02-17",
+      "tags": [
+        "uav",
+        "biodiversity"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.yaml",
+        "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/lidar/schema.json"
+      },
+      "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.lidar/schema.yaml",
+      "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.lidar/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/extension/lidar/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/lidar/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/lidar/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.lidar"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.extension.multispectral",
+      "$schema": "metaschema.yaml",
+      "name": "extension.multispectral",
+      "abstract": "UAV biodiversity building block",
+      "status": "under-development",
+      "dateTimeAddition": "2026-02-17T08:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1.0",
+      "dateOfLastChange": "2026-02-17",
+      "tags": [
+        "uav",
+        "biodiversity"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.yaml",
+        "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/multispectral/schema.json"
+      },
+      "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.multispectral/schema.yaml",
+      "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.multispectral/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/extension/multispectral/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/multispectral/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/multispectral/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.multispectral"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.extension.rtk",
+      "$schema": "metaschema.yaml",
+      "name": "extension.rtk",
+      "abstract": "UAV biodiversity building block",
+      "status": "under-development",
+      "dateTimeAddition": "2026-02-17T08:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1.0",
+      "dateOfLastChange": "2026-02-17",
+      "tags": [
+        "uav",
+        "biodiversity"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.yaml",
+        "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.json"
+      },
+      "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.rtk/schema.yaml",
+      "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.rtk/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/extension/rtk/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/rtk/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/rtk/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.rtk"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.extension.thermal",
+      "$schema": "metaschema.yaml",
+      "name": "extension.thermal",
+      "abstract": "UAV biodiversity building block",
+      "status": "under-development",
+      "dateTimeAddition": "2026-02-17T08:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1.0",
+      "dateOfLastChange": "2026-02-17",
+      "tags": [
+        "uav",
+        "biodiversity"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.yaml",
+        "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/thermal/schema.json"
+      },
+      "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.thermal/schema.yaml",
+      "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.thermal/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/extension/thermal/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/extension/thermal/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/extension/thermal/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.extension.thermal"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.profile",
+      "$schema": "metaschema.yaml",
+      "name": "profile",
+      "abstract": "UAV biodiversity building block",
+      "status": "under-development",
+      "dateTimeAddition": "2026-02-17T08:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1.0",
+      "dateOfLastChange": "2026-02-17",
+      "tags": [
+        "uav",
+        "biodiversity"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.extension.multispectral",
+        "ogc.extension.rtk",
+        "ogc.extension.thermal",
+        "ogc.core",
+        "ogc.extension.lidar"
+      ],
+      "schema": {
+        "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/profile/schema.yaml",
+        "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/profile/schema.json"
+      },
+      "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/profile/schema.yaml",
+      "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/profile/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/profile/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/markdown/profile/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/generateddocs/json-full/profile/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/bblock/ogc.profile"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}

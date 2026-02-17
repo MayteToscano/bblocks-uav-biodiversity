@@ -1,0 +1,21 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: UBCP Multispectral Extension
+type: object
+additionalProperties: false
+properties:
+  band_name:
+    type: string
+  central_wavelength_nm:
+    type: number
+    minimum: 0
+  fwhm_nm:
+    type: number
+    minimum: 0
+  irradiance_reference:
+    type: string
+    description: Irradiance / downwelling light reference measurement.
+  reflectance_conversion_model:
+    type: string
+required:
+- band_name
+- central_wavelength_nm

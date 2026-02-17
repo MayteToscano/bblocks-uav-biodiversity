@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.extension.rtk",
+  "$schema": "metaschema.yaml",
+  "name": "extension.rtk",
+  "abstract": "UAV biodiversity building block",
+  "status": "under-development",
+  "dateTimeAddition": "2026-02-17T08:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-02-17",
+  "tags": [
+    "uav",
+    "biodiversity"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/extension/rtk/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.rtk/schema.yaml",
+  "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/extension.rtk/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/extension/rtk/",
+  "description": "## Purpose\n\nAdds GNSS/RTK quality indicators needed to reason about positional uncertainty and downstream alignment.\n",
+  "examples": [
+    {
+      "title": "Example for UBCP RTK Extension",
+      "base-uri": "http://example.com/ubcp/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/example.json",
+          "code": "{\n  \"positioning_mode\": \"RTK\",\n  \"rtk_std_lat_m\": 0.0145,\n  \"rtk_std_lon_m\": 0.0118,\n  \"rtk_std_hgt_m\": 0.0272,\n  \"rtk_diff_age_s\": 0.4\n}\n",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/extension/rtk/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: UBCP RTK/GNSS Precision Extension\ntype: object\nadditionalProperties: false\nproperties:\n  positioning_mode:\n    type: string\n    description: GNSS positioning mode (e.g., RTK, PPK, SPS).\n  rtk_std_lat_m:\n    type: number\n    minimum: 0\n  rtk_std_lon_m:\n    type: number\n    minimum: 0\n  rtk_std_hgt_m:\n    type: number\n    minimum: 0\n  rtk_diff_age_s:\n    type: number\n    minimum: 0\nrequired:\n- positioning_mode\n",
+  "gitRepository": "https://github.com/MayteToscano/bblocks-uav-biodiversity",
+  "gitPath": "_sources/extension.rtk"
+}

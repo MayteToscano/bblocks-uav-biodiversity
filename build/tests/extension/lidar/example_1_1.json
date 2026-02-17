@@ -1,0 +1,6 @@
+{
+  "point_density": 120.0,
+  "scan_pattern": "zigzag",
+  "return_number": 2,
+  "intensity_calibration": "intensity-cal-v1"
+}

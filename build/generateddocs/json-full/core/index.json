@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.core",
+  "$schema": "metaschema.yaml",
+  "name": "core",
+  "abstract": "UAV biodiversity building block",
+  "status": "under-development",
+  "dateTimeAddition": "2026-02-17T08:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-02-17",
+  "tags": [
+    "uav",
+    "biodiversity"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.yaml",
+    "application/json": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/annotated/core/schema.json"
+  },
+  "sourceSchema": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/core/schema.yaml",
+  "sourceFiles": "https://maytetoscano.github.io/bblocks-uav-biodiversity/_sources/core/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/MayteToscano/bblocks-uav-biodiversity/blob/main/build/tests/core/",
+  "description": "## Purpose\n\nThis building block defines the **minimum interoperable UAV capture metadata** needed to interpret biodiversity UAV observations.\n\n## Scope\n\nMandatory baseline fields covering:\n\n- temporal reference\n- spatial reference\n- platform orientation\n- sensor identification\n- optical configuration\n- CRS declaration\n- (optional) high-level processing lineage\n\n## Mapping (indicative)\n\n- **ISO 19115 / ISO 19115-2**: metadata + acquisition\n- **ISO 19111**: CRS identifiers\n- **OGC GeoPose**: pose/orientation concepts\n- **OGC SensorML / SOSA-SSN**: sensor and procedure modelling\n- **PROV-O**: lineage concepts\n- **STAC**: packaging of imagery assets (when applicable)\n",
+  "examples": [
+    {
+      "title": "Example for UBCP Core UAV Capture Module (Mandatory Base)",
+      "base-uri": "http://example.com/ubcp/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/example.json",
+          "code": "{\n  \"temporal_reference\": \"2026-02-17T08:00:00Z\",\n  \"spatial_reference\": {\n    \"latitude_deg\": 44.74835,\n    \"longitude_deg\": 22.43592,\n    \"altitude_m\": 416.7\n  },\n  \"platform_orientation\": {\n    \"yaw_deg\": 71.1,\n    \"pitch_deg\": 3.8,\n    \"roll_deg\": 3.7\n  },\n  \"sensor_identification\": {\n    \"platform_model\": \"Matrice 350 RTK\",\n    \"sensor_model\": \"H20T\",\n    \"firmware_version\": \"07.00.01.05\"\n  },\n  \"optical_configuration\": {\n    \"focal_length_mm\": 13.5,\n    \"exposure_time_s\": 0.002,\n    \"iso\": 100,\n    \"f_number\": 1.0\n  },\n  \"crs_declaration\": {\n    \"horizontal_crs\": \"http://www.opengis.net/def/crs/EPSG/0/4326\",\n    \"vertical_reference\": \"AboveSeaLevel\"\n  },\n  \"processing_lineage\": {\n    \"activity_id\": \"capture-272d5ad8b6eb11ef\",\n    \"preprocessing_applied\": false,\n    \"lineage_statement\": \"Raw capture metadata recorded by platform.\"\n  }\n}\n",
+          "url": "https://maytetoscano.github.io/bblocks-uav-biodiversity/build/tests/core/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: UBCP Core UAV Capture Module (Mandatory Base)\ntype: object\nadditionalProperties: false\nproperties:\n  temporal_reference:\n    description: Capture timestamp in ISO 8601.\n    type: string\n    format: date-time\n  spatial_reference:\n    description: Spatial position of the capture (WGS84 lat/lon) and altitude.\n    type: object\n    additionalProperties: false\n    properties:\n      latitude_deg:\n        type: number\n        minimum: -90\n        maximum: 90\n      longitude_deg:\n        type: number\n        minimum: -180\n        maximum: 180\n      altitude_m:\n        type: number\n    required:\n    - latitude_deg\n    - longitude_deg\n  platform_orientation:\n    description: UAV orientation at exposure (degrees).\n    type: object\n    additionalProperties: false\n    properties:\n      yaw_deg:\n        type: number\n      pitch_deg:\n        type: number\n      roll_deg:\n        type: number\n    required:\n    - yaw_deg\n    - pitch_deg\n    - roll_deg\n  sensor_identification:\n    description: Identifiers for the sensor and platform.\n    type: object\n    additionalProperties: false\n    properties:\n      platform_model:\n        type: string\n      platform_serial:\n        type: string\n      sensor_model:\n        type: string\n      sensor_serial:\n        type: string\n      firmware_version:\n        type: string\n    required:\n    - platform_model\n    - sensor_model\n  optical_configuration:\n    description: Basic optical configuration of the sensor.\n    type: object\n    additionalProperties: false\n    properties:\n      focal_length_mm:\n        type: number\n      f_number:\n        type: number\n      exposure_time_s:\n        type: number\n      iso:\n        type: integer\n        minimum: 0\n    required:\n    - focal_length_mm\n    - exposure_time_s\n  crs_declaration:\n    description: CRS identifiers used for horizontal and vertical referencing.\n    type: object\n    additionalProperties: false\n    properties:\n      horizontal_crs:\n        type: string\n      vertical_reference:\n        type: string\n    required:\n    - horizontal_crs\n  processing_lineage:\n    description: High-level lineage description of capture/processing.\n    type: object\n    additionalProperties: false\n    properties:\n      activity_id:\n        type: string\n      preprocessing_applied:\n        type: boolean\n      lineage_statement:\n        type: string\nrequired:\n- temporal_reference\n- spatial_reference\n- platform_orientation\n- sensor_identification\n- optical_configuration\n- crs_declaration\n",
+  "gitRepository": "https://github.com/MayteToscano/bblocks-uav-biodiversity",
+  "gitPath": "_sources/core"
+}
