@@ -1,0 +1,19 @@
+{
+  "$schema": "metaschema.yaml",
+  "name": "UBCP Core UAV Capture Module (Mandatory Base)",
+  "abstract": "Minimum interoperable metadata required to describe UAV data capture for biodiversity monitoring (mandatory baseline).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-02-17T08:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-02-17",
+  "tags": [
+    "UAV",
+    "biodiversity",
+    "capture",
+    "metadata",
+    "core"
+  ],
+  "dependsOn": []
+}

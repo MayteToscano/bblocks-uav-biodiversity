@@ -1,0 +1,20 @@
+{
+  "$schema": "metaschema.yaml",
+  "name": "UBCP Thermal Extension",
+  "abstract": "Thermal radiometric capture parameters for UAV biodiversity surveys.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-02-17T08:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-02-17",
+  "tags": [
+    "UAV",
+    "thermal",
+    "metadata",
+    "extension"
+  ],
+  "dependsOn": [
+    "ogc.ubcp.core"
+  ]
+}

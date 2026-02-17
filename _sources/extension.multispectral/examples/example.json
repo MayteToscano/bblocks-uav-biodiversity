@@ -1,0 +1,7 @@
+{
+  "band_name": "Blue",
+  "central_wavelength_nm": 450,
+  "fwhm_nm": 16,
+  "irradiance_reference": "sun-sensor",
+  "reflectance_conversion_model": "vendor-reflectance-v2"
+}

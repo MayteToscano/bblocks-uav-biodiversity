@@ -1,0 +1,7 @@
+{
+  "positioning_mode": "RTK",
+  "rtk_std_lat_m": 0.0145,
+  "rtk_std_lon_m": 0.0118,
+  "rtk_std_hgt_m": 0.0272,
+  "rtk_diff_age_s": 0.4
+}

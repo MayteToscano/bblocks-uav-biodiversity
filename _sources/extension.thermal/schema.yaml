@@ -1,0 +1,16 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "UBCP Thermal Extension"
+type: object
+additionalProperties: false
+properties:
+  emissivity:
+    type: number
+    minimum: 0
+    maximum: 1
+  thermal_calibration:
+    type: string
+    description: "Identifier or description of thermal calibration coefficients/procedure."
+  radiometric_temperature_model:
+    type: string
+    description: "Reference to the model used to convert raw counts to temperature."
+required: [emissivity]

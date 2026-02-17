@@ -1,0 +1,17 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "UBCP Profile"
+description: "An aggregate object that contains Core plus optional extensions."
+type: object
+additionalProperties: false
+properties:
+  core:
+    $ref: "../core/schema.yaml"
+  thermal:
+    $ref: "../extension.thermal/schema.yaml"
+  multispectral:
+    $ref: "../extension.multispectral/schema.yaml"
+  lidar:
+    $ref: "../extension.lidar/schema.yaml"
+  rtk:
+    $ref: "../extension.rtk/schema.yaml"
+required: [core]

@@ -1,0 +1,5 @@
+- title: Example for UBCP LiDAR Extension
+  base-uri: http://example.com/ubcp/
+  snippets:
+    - language: json
+      ref: examples/example.json
