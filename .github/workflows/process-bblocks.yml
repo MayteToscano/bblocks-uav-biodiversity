@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@master
+    uses: opengeospatial/bblocks-postprocess/.github/workflows/process-bblocks.yml@main
     with:
       items-dir: _sources
       register-file: build/register.json
