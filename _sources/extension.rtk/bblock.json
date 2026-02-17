@@ -1,21 +1,12 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "UBCP RTK Extension",
-  "abstract": "GNSS/RTK positioning quality metadata for UAV biodiversity surveys.",
+  "name": "extension.rtk",
+  "abstract": "UAV biodiversity building block",
   "status": "under-development",
   "dateTimeAddition": "2026-02-17T08:00:00Z",
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1.0",
   "dateOfLastChange": "2026-02-17",
-  "tags": [
-    "UAV",
-    "RTK",
-    "GNSS",
-    "metadata",
-    "extension"
-  ],
-  "dependsOn": [
-    "ogc.ubcp.core"
-  ]
+  "tags": ["uav","biodiversity"]
 }

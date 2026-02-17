@@ -1,24 +1,12 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "UBCP Profile (Core + Extensions)",
-  "abstract": "Aggregating profile for UAV biodiversity capture metadata: Core mandatory, extensions optional.",
+  "name": "profile",
+  "abstract": "UAV biodiversity building block",
   "status": "under-development",
   "dateTimeAddition": "2026-02-17T08:00:00Z",
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1.0",
   "dateOfLastChange": "2026-02-17",
-  "tags": [
-    "UAV",
-    "biodiversity",
-    "profile",
-    "metadata"
-  ],
-  "dependsOn": [
-    "ogc.ubcp.core",
-    "ogc.ubcp.extension.thermal",
-    "ogc.ubcp.extension.multispectral",
-    "ogc.ubcp.extension.lidar",
-    "ogc.ubcp.extension.rtk"
-  ]
+  "tags": ["uav","biodiversity"]
 }

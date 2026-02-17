@@ -1,4 +1,4 @@
 name: bblocks-uav-biodiversity
-base-url: "https://maytetoscano.github.io/bblocks-uav-biodiversity/"
+base-url: https://maytetoscano.github.io/bblocks-uav-biodiversity
 imports:
-  - "https://opengeospatial.github.io/bblocks/register.json"
+  - https://opengeospatial.github.io/bblocks/register.json
